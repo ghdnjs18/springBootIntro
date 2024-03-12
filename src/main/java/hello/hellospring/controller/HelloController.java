@@ -3,6 +3,7 @@ package hello.hellospring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloController {
@@ -14,5 +15,11 @@ public class HelloController {
         // rest Controller가 아닌 일반 controller의 경우 리턴 값으로 문자를 반환하면 viewResolver에서 화면을 찾아 처리한다.
         // viewResolver가 resources/templates에 있는 같은 이름을 가진 html 파일을 viewName매핑을 한다.
         return "hello";
+    }
+
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello-template";
     }
 }
