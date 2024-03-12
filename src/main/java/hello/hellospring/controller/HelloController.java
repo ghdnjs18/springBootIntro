@@ -19,6 +19,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-mvc")
+    // @RequestParam : get방식에서 ?name=값 형태로 사용되는 기본적인 값 전달 방식
     public String helloMvc(@RequestParam("name") String name, Model model) {
         model.addAttribute("name", name);
         return "hello-template";
