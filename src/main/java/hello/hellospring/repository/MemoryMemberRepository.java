@@ -1,10 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // 공유되는 변수일 경우 동시성 문제가 발생할 수 있어 실무에서는 ConcurrentHashMap, AtomicLong 사용 고려한다.
