@@ -16,6 +16,12 @@ repositories {
 }
 
 dependencies {
+	// h2 데이터베이스
+	runtimeOnly 'com.h2database:h2'
+
+	// jdbc 드라이버
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
