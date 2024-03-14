@@ -17,20 +17,20 @@ public class SpringConfig {
 
 //    private DataSource dataSource;
 //    @PersistenceContext // 원래는 추가를 해주어야 한다.
-    private EntityManager em;
+//    private EntityManager em;
 
-    @Autowired
+//    @Autowired
 //    public SpringConfig(DataSource dataSource) {
-    public SpringConfig(EntityManager em) {
+//    public SpringConfig(EntityManager em) {
 //        this.dataSource = dataSource;
-        this.em = em;
-    }
+//        this.em = em;
+//    }
 
-    @Bean
-    public MemberRepository memberRepository() {
+//    @Bean
+//    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
 //        return new JdbcMemberRepository(dataSource);
 //        return new JdbcTemplateMemberRepository(dataSource);
-        return new JpaMemberRepository(em);
-    }
+//        return new JpaMemberRepository(em);
+//    }
 }
